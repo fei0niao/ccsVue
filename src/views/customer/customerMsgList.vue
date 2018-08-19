@@ -132,16 +132,9 @@
             }
         },
         activated () {
-            console.log(1);
-            console.log(Echo);
-
-            Echo.channel('channel').whisper('ssss', 11111);
             Echo.channel('channel_1')
                 .listen('KFChart', (e) => {
                     console.log(111111111111111);
-                });
-            Echo.channel('channel').listenForWhisper('ssss', (e) => {
-                    console.log(444444444444);
                 });
             this.init();
         }

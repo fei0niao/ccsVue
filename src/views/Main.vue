@@ -7,7 +7,7 @@
             <shrinkable-menu
                 :shrink="shrink"
                 @on-change="handleSubmenuChange"
-                :theme="menuTheme" 
+                :theme="menuTheme"
                 :before-push="beforePush"
                 :open-names="openedSubmenuArr"
                 :menu-list="menuList">
@@ -34,7 +34,7 @@
                     <lock-screen></lock-screen>
                     <message-tip v-model="mesCount" v-if = "false"></message-tip>
                     <theme-switch></theme-switch>
-                    
+
                     <div class="user-dropdown-menu-con">
                         <Row type="flex" justify="end" align="middle" class="user-dropdown-innercon">
                             <Dropdown transfer trigger="click" @on-click="handleClickUserDropdown">
@@ -68,6 +68,7 @@
                 </router-view>
             </div>
         </div>
+        <chart></chart>
     </div>
 </template>
 <script>
@@ -79,7 +80,8 @@
     import messageTip from './main-components/message-tip.vue';
     import themeSwitch from './main-components/theme-switch/theme-switch.vue';
     import Cookies from 'js-cookie';
-    
+    import chart from './chart/chart.vue';
+
     export default {
         components: {
             shrinkableMenu,
@@ -88,7 +90,8 @@
             fullScreen,
             lockScreen,
             messageTip,
-            themeSwitch
+            themeSwitch,
+            chart
         },
         data () {
             return {
